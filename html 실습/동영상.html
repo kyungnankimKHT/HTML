@@ -4,31 +4,76 @@
     <meta charset="UTF-8" />
     <title>동영상 게시판</title>
     <style>
-        .icon {
-            width: 50px;
-            height: 50px;
-        }
-        body{
-            margin: 0 auto;
-            text-align: center;
-        }
-        img {
-            width: 50%;
-            height: 50%;
-        }
+      .icon {
+        width: 50px;
+        height: 50px;
+      }
+      body {
+        background-color: aliceblue;
+
+        margin: 0 auto;
+      }
+      .컨테이너 {
+        margin: 0 auto;
+        width: 70%;
+        background-color: white;
+      }
+      h1 {
+        text-align: center;
+      }
+      video {
+        margin: 0 auto;
+        display: block;
+        width: 50%;
+        border-radius: 10px;
+      }
+      a {
+        text-align: center;
+        margin: 0 auto;
+      }
+      .버튼꾸미기 {
+        display: block;
+        text-align: center;
+      }
+      .댓글들 {
+        padding: 10px;
+      }
+      .댓글 {
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        padding: 5px;
+      }
     </style>
   </head>
   <body>
-    <h1>동영상 게시판</h1>
-    <!-- 동영상 상대경로로 1개 올리기
-        동영상 절대경로로 1개 올리기
-    -->
-    <img src="../이미지들/lovelyMarley.jpg">
-    <a href="홈페이지게시판.html">
-      <img class="icon" src="../이미지들/healing.jpg" />
-    </a>
-    <a href="홈페이지메인.html">
-      <img  class="icon"src="../이미지들/hogam.jpg" />
-    </a>
+    <div class="컨테이너">
+      <h1>동영상 게시판</h1>
+      <video>
+        <source src="../비디오들/210072_small.mp4" type="video/mp4" />
+      </video>
+
+      <div class="댓글들">
+        댓글확인
+        <div class="댓글">
+          <p>사용자 :</p>
+          <p>멋지네요.</p>
+        </div>
+        <br>
+        <div class="댓글">
+          <p>사용자 :</p>
+          <p>늠름하네요.</p>
+        </div>
+      </div>
+      <br />
+      <div class="버튼꾸미기">
+        <a href="홈페이지게시판.html">
+          <img class="icon" src="../이미지들/healing.jpg" />
+        </a>
+        <a href="홈페이지메인.html">
+          <img class="icon" src="../이미지들/hogam.jpg" />
+        </a>
+      </div>
+    </div>
   </body>
 </html>
