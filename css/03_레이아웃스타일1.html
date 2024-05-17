@@ -82,18 +82,87 @@
                 */
                 visibility: hidden;
             }
+            .영역4{
+                background-color: blue;
+            }
+            .영역5{
+                background-color: brown;
+            }
+            /* 해당 태그의 영역이 안보이게 되면 영역의 공간 또한 사라지게 됨 
+                사용자에게 존재 자체를 드러내지 않기 위해 사용
+            */
+            .논 {
+                display: none;
+            }
+            .영역6{
+                background-color: purple;
+            }
         </style>
         <span class="블록 영역1 인라인블록">1번 영역</span>
         <!--엔터를 쳐서 span 태그 줄 바꿈을 해주면 1번 영역과 2번 영역 사이에는 띄어쓰기가 존재-->
         <span class="블록 영역2 인라인블록">2번 영역</span>
         <span class="블록 영역3 인라인블록 히든">3번 영역</span>
-        <span class="블록 영역3 인라인블록">4번 영역</span>
+        <span class="블록 영역4 인라인블록">4번 영역</span>
+        <span class="블록 영역5 인라인블록 논">5번 영역</span>
+        <span class="블록 영역6 인라인블록">6번 영역</span>
+        <hr><hr>
 
+        <h3>화면 영역 분할 영역</h3>
+        <h4>상하로 2 분할 하기</h4>
+        <style>
+            .컨테이너 {
+                border: 3px solid black;
+                width: 470px;
+                height: 470px;
+            }
+            /* 컨테이너 밑에 div가 존재한다는 표시
+                컨테이너에서 설정한 470 크기 안에서
+                100% 하거나 50%를 유지하라는 의미
+                자식 css 
+            */
+            .컨테이너 > div {
+                width: 100%;
+                height: 50%;
+            }
 
+            .컨테이너 > div:first-child {
+                background-color: lightpink;
+            }
+            .컨테이너 > div:last-child {
+                background-color: darkslategray;
+            }
+        </style>
+        <div class="컨테이너">
+            <div></div>
+            <div></div>
+        </div>
 
-
-
-
+        <h2>상하 3분할</h2>
+        <pre>
+            조건 : 지식
+            - 20 : 30 : 50 비율
+            - 배경색 : orange yellow green
+            - 이외 필요한 속성 자유롭게 추가
+        </pre>
+        <style>
+            #태그2 > div:nth-child(1) {
+                height: 20%;
+                background-color: orange;
+            }
+            #태그2 > div:nth-child(2) {
+                height: 30%;
+                background-color: yellow;
+            }
+            #태그2 > div:nth-child(3) {
+                height: 50%;
+                background-color: green;
+            }
+        </style>
+        <div class="컨테이너" id="태그2">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
 
 
 
